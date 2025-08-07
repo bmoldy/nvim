@@ -23,11 +23,20 @@ return {
 			keywordStyle = { italic = true },
 			statementStyle = { bold = true },
 			typeStyle = {},
-			transparent = false, -- do not set background color
+			transparent = true, -- do not set background color
 			dimInactive = false, -- dim inactive window `:h hl-NormalNC`
 			terminalColors = true, -- define vim.g.terminal_color_{0,17}
 			colors = {
-				theme = { all = { ui = { bg_gutter = "none" }, syn = { statement = "#8ba4b0", keyword = "#8ba4b0" } } },
+				theme = {
+					all = {
+						ui = { bg_gutter = "none" },
+						syn = {
+							statement = "#C34043",
+							keyword = "#76946A",
+							background = "#000000",
+						},
+					},
+				},
 			},
 			overrides = function(colors) -- add/modify highlights
 				return {}
@@ -49,6 +58,37 @@ return {
 			{ "<leader>v", ft = "lua", desc = "LÖVE" },
 			{ "<leader>vv", "<cmd>LoveRun<cr>", ft = "lua", desc = "Run LÖVE" },
 			{ "<leader>vs", "<cmd>LoveStop<cr>", ft = "lua", desc = "Stop LÖVE" },
+		},
+	},
+	{
+		"elixir-tools/elixir-tools.nvim",
+		version = "*",
+		event = { "BufReadPre", "BufNewFile" },
+		config = function()
+			local elixir = require("elixir")
+			--local elixirls = require("elixir.elixirls")
+
+			elixir.setup({
+				nextls = { enable = true },
+				--				elixirls = {
+				--					enable = false,
+				--					settings = elixirls.settings({
+				--						dialyzerEnabled = false,
+				--						enableTestLenses = false,
+				--					}),
+				--					on_attach = function(client, bufnr)
+				--						vim.keymap.set("n", "<space>fp", ":ElixirFromPipe<cr>", { buffer = true, noremap = true })
+				--						vim.keymap.set("n", "<space>tp", ":ElixirToPipe<cr>", { buffer = true, noremap = true })
+				--						vim.keymap.set("v", "<space>em", ":ElixirExpandMacro<cr>", { buffer = true, noremap = true })
+				--					end,
+				--				},
+				projectionist = {
+					enable = true,
+				},
+			})
+		end,
+		dependencies = {
+			"nvim-lua/plenary.nvim",
 		},
 	},
 }
