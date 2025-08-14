@@ -90,6 +90,7 @@ vim.keymap.set("i", "jj", "<Esc>")
 vim.keymap.set("n", "<leader>pv", "<cmd>Ex<CR>")
 vim.keymap.set("n", "<leader>pt", "<cmd>colorscheme tokyonight<CR>")
 vim.keymap.set("n", "<leader>pk", "<cmd>colorscheme kanagawa<CR>")
+vim.keymap.set("n", "<leader>po", "<cmd>colorscheme solarized-osaka<CR>")
 vim.cmd([[
 " Use Tab to expand and jump through snippets
 imap <silent><expr> <Tab> luasnip#expand_or_jumpable() ? '<Plug>luasnip-expand-or-jump' : '<Tab>' 
@@ -621,7 +622,7 @@ require("lazy").setup({
 				-- But for many setups, the LSP (`ts_ls`) will work just fine
 				ts_ls = {},
 				--
-				nextls = {},
+				elixirls = {},
 				lua_ls = {
 					-- cmd = { ... },
 					-- filetypes = { ... },
@@ -835,7 +836,7 @@ require("lazy").setup({
 			-- Load the colorscheme here.
 			-- Like many other themes, this one has different styles, and you could load
 			-- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
-			vim.cmd.colorscheme("tokyonight-night")
+			vim.cmd.colorscheme("solarized-osaka")
 		end,
 	},
 
@@ -904,6 +905,9 @@ require("lazy").setup({
 				"vimdoc",
 				"javascript",
 				"elixir",
+				"css",
+				"gitignore",
+				"http",
 			},
 			-- Autoinstall languages that are not installed
 			auto_install = true,
