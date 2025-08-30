@@ -207,4 +207,53 @@ return {
 			}
 		)
 	),
+	s(
+		{ trig = ";template", regTrig = true, wordTrig = false, snippetType = "autosnippet" },
+		fmta(
+			[[
+\documentclass{article}
+\usepackage{../macros}
+\input{\string ../environments.tex}
+
+
+\title{\Huge{<>}}
+\author{\Huge{Dr. Benjamin Moldstad}}
+\date{\today}
+
+
+\begin{document}
+<>
+\end{document}
+			
+			]],
+			{
+				i(1),
+				i(2),
+			}
+		)
+	),
+	s(
+		{ trig = ";test", regTrig = true, wordTrig = false, snippetType = "autosnippet" },
+		fmta(
+			[[
+\documentclass{exam}
+\usepackage{../macros}
+\input{\string ../environments.tex}
+
+%\noprintanswers
+\printanswers
+
+\begin{document}
+
+\begin{questions}
+\question <>
+\end{questions}
+
+\end{document}
+			]],
+			{
+				i(1),
+			}
+		)
+	),
 }
