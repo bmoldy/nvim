@@ -229,6 +229,11 @@ require("lazy").setup({
 		"folke/which-key.nvim",
 		event = "VimEnter", -- Sets the loading event to 'VimEnter'
 		opts = {
+			win = {
+				wo = {
+					winblend = 0, -- value between 0-100 0 for fully opaque and 100 for fully transparent
+				},
+			},
 			-- delay between pressing a key and opening which-key (milliseconds)
 			-- this setting is independent of vim.o.timeoutlen
 			delay = 0,
