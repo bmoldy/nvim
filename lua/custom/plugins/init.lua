@@ -13,41 +13,6 @@ return {
 			vim.g.vimtex_fold_enabled = 1
 		end,
 	},
-	{
-		"rebelot/kanagawa.nvim",
-		opts = {
-			compile = false, -- enable compiling the colorscheme
-			undercurl = true, -- enable undercurls
-			commentStyle = { italic = true },
-			functionStyle = {},
-			keywordStyle = { italic = true },
-			statementStyle = { bold = true },
-			typeStyle = {},
-			transparent = true, -- do not set background color
-			dimInactive = false, -- dim inactive window `:h hl-NormalNC`
-			terminalColors = true, -- define vim.g.terminal_color_{0,17}
-			colors = {
-				theme = {
-					all = {
-						ui = { bg_gutter = "none" },
-						syn = {
-							statement = "#C34043",
-							keyword = "#76946A",
-							background = "#000000",
-						},
-					},
-				},
-			},
-			overrides = function(colors) -- add/modify highlights
-				return {}
-			end,
-			theme = "wave", -- Load "wave" theme
-			background = { -- map the value of 'background' option to a theme
-				dark = "wave", -- try "dragon" !
-				light = "wave",
-			},
-		},
-	},
 	-- using lazy.nvim
 	{
 		"S1M0N38/love2d.nvim",
@@ -92,14 +57,15 @@ return {
 		},
 	},
 	{
-		"craftzdog/solarized-osaka.nvim",
-		branch = "osaka",
-		lazy = true,
-		priority = 1000,
-		opts = function()
-			return {
-				transparent = true,
-			}
+		"neanias/everforest-nvim",
+		version = false,
+		lazy = false,
+		priority = 1000, -- make sure to load this before all the other start plugins
+		-- Optional; default configuration will be used if setup isn't called.
+		config = function()
+			require("everforest").setup({
+				-- Your config here
+			})
 		end,
 	},
 }

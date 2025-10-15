@@ -89,10 +89,9 @@ vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 vim.keymap.set("i", "jj", "<Esc>")
 vim.keymap.set("n", "<leader>pv", "<cmd>Ex<CR>")
 vim.keymap.set("n", "<leader>pt", "<cmd>colorscheme tokyonight<CR>")
-vim.keymap.set("n", "<leader>pk", "<cmd>colorscheme kanagawa<CR>")
-vim.keymap.set("n", "<leader>po", "<cmd>colorscheme solarized-osaka<CR>")
+vim.keymap.set("n", "<leader>pe", "<cmd>colorscheme everforest<CR>")
 vim.cmd([[
-" Use Tab to expand and jump through snippets
+"tokyonight Use Tab to expand and jump through snippets
 imap <silent><expr> <Tab> luasnip#expand_or_jumpable() ? '<Plug>luasnip-expand-or-jump' : '<Tab>' 
 smap <silent><expr> <Tab> luasnip#jumpable(1) ? '<Plug>luasnip-jump-next' : '<Tab>'
 
@@ -620,7 +619,7 @@ require("lazy").setup({
 				--    https://github.com/pmizio/typescript-tools.nvim
 				--
 				-- But for many setups, the LSP (`ts_ls`) will work just fine
-				ts_ls = {},
+				-- ts_ls = {},
 				--
 				elixirls = {},
 				lua_ls = {
@@ -836,7 +835,7 @@ require("lazy").setup({
 			-- Load the colorscheme here.
 			-- Like many other themes, this one has different styles, and you could load
 			-- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
-			vim.cmd.colorscheme("solarized-osaka")
+			vim.cmd.colorscheme("everforest")
 		end,
 	},
 
