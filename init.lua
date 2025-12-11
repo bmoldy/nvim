@@ -840,7 +840,7 @@ require("lazy").setup({
 			-- Load the colorscheme here.
 			-- Like many other themes, this one has different styles, and you could load
 			-- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
-			vim.cmd.colorscheme("everforest")
+			vim.cmd.colorscheme("cyberdream")
 		end,
 	},
 
@@ -917,6 +917,7 @@ require("lazy").setup({
 			auto_install = true,
 			highlight = {
 				enable = true,
+				disable = { "latex", "tex" },
 				-- Some languages depend on vim's regex highlighting system (such as Ruby) for indent rules.
 				--  If you are experiencing weird indenting issues, add the language to
 				--  the list of additional_vim_regex_highlighting and disabled languages for indent.
