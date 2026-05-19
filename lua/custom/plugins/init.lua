@@ -13,18 +13,6 @@ return {
 			vim.g.vimtex_fold_enabled = 1
 		end,
 	},
-	-- using lazy.nvim
-	{
-		"S1M0N38/love2d.nvim",
-		event = "VeryLazy",
-		version = "2.*",
-		opts = { path_to_love_bin = "love" },
-		keys = {
-			{ "<leader>v", ft = "lua", desc = "LÖVE" },
-			{ "<leader>vv", "<cmd>LoveRun<cr>", ft = "lua", desc = "Run LÖVE" },
-			{ "<leader>vs", "<cmd>LoveStop<cr>", ft = "lua", desc = "Stop LÖVE" },
-		},
-	},
 	{
 		"elixir-tools/elixir-tools.nvim",
 		version = "*",
@@ -111,5 +99,14 @@ return {
 				},
 			})
 		end,
+	},
+	{
+		"MeanderingProgrammer/render-markdown.nvim",
+		dependencies = { "nvim-treesitter/nvim-treesitter", "nvim-mini/mini.nvim" }, -- if you use the mini.nvim suite
+		-- dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-mini/mini.icons' },        -- if you use standalone mini plugins
+		-- dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' }, -- if you prefer nvim-web-devicons
+		---@module 'render-markdown'
+		---@type render.md.UserConfig
+		opts = {},
 	},
 }
