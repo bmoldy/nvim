@@ -109,4 +109,101 @@ return {
 		---@type render.md.UserConfig
 		opts = {},
 	},
+	{
+		"ribru17/bamboo.nvim",
+		lazy = false,
+		priority = 1000,
+	},
+	{
+		"bjarneo/aether.nvim",
+		lazy = false,
+		priority = 1000,
+	},
+	{
+		"bjarneo/ethereal.nvim",
+		lazy = false,
+		priority = 1000,
+	},
+	{
+		"bjarneo/hackerman.nvim",
+		lazy = false,
+		priority = 1000,
+	},
+	{
+		"bjarneo/vantablack.nvim",
+		lazy = false,
+		priority = 1000,
+	},
+	{
+		"bjarneo/white.nvim",
+		lazy = false,
+		priority = 1000,
+	},
+	{
+		"catppuccin/nvim",
+		name = "catppuccin",
+		lazy = false,
+		priority = 1000,
+	},
+	{
+		"sainnhe/everforest",
+		lazy = false,
+		priority = 1000,
+	},
+	{
+		"kepano/flexoki-neovim",
+		lazy = false,
+		priority = 1000,
+	},
+	{
+		"ellisonleao/gruvbox.nvim",
+		lazy = false,
+		priority = 1000,
+	},
+	{
+		"rebelot/kanagawa.nvim",
+		lazy = false,
+		priority = 1000,
+	},
+	{
+		"tahayvr/matteblack.nvim",
+		lazy = false,
+		priority = 1000,
+	},
+	{
+		"loctvl842/monokai-pro.nvim",
+		lazy = false,
+		priority = 1000,
+	},
+	{
+		"shaunsingh/nord.nvim",
+		lazy = false,
+		priority = 1000,
+	},
+	{
+		"rose-pine/neovim",
+		name = "rose-pine",
+		lazy = false,
+		priority = 1000,
+	},
+	{
+		"folke/tokyonight.nvim",
+		lazy = false,
+		priority = 1000,
+	},
+	{
+		"OldJobobo/miasma.nvim",
+		lazy = false,
+		priority = 1000,
+	},
+	{
+		"OldJobobo/retro-82.nvim",
+		lazy = false,
+		priority = 1000,
+	},
+	{
+		"omacom-io/lumon.nvim",
+		lazy = false,
+		priority = 1000,
+	},
 }
