@@ -22,7 +22,7 @@ return {
 			local elixirls = require("elixir.elixirls")
 
 			elixir.setup({
-				nextls = { enable = true },
+				nextls = { enable = false },
 				elixirls = {
 					enable = true,
 					settings = elixirls.settings({
@@ -195,6 +195,7 @@ return {
 		"OldJobobo/miasma.nvim",
 		lazy = false,
 		priority = 1000,
+		transparent = true,
 	},
 	{
 		"OldJobobo/retro-82.nvim",
@@ -205,5 +206,23 @@ return {
 		"omacom-io/lumon.nvim",
 		lazy = false,
 		priority = 1000,
+	},
+	{
+		"xiyaowong/transparent.nvim",
+	},
+	{
+		"chomosuke/typst-preview.nvim",
+		lazy = false, -- or ft = 'typst'
+		version = "1.*",
+		opts = {}, -- lazy.nvim will implicitly calls `setup {}`
+	},
+	{
+		"MeanderingProgrammer/render-markdown.nvim",
+		dependencies = { "nvim-treesitter/nvim-treesitter", "nvim-mini/mini.nvim" }, -- if you use the mini.nvim suite
+		-- dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-mini/mini.icons' },        -- if you use standalone mini plugins
+		-- dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' }, -- if you prefer nvim-web-devicons
+		---@module 'render-markdown'
+		---@type render.md.UserConfig
+		opts = {},
 	},
 }

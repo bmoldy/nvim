@@ -840,7 +840,7 @@ require("lazy").setup({
 			-- Load the colorscheme here.
 			-- Like many other themes, this one has different styles, and you could load
 			-- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
-			vim.cmd.colorscheme("miasma")
+			vim.cmd.colorscheme("kanagawa")
 		end,
 	},
 
@@ -911,9 +911,11 @@ require("lazy").setup({
 				"css",
 				"gitignore",
 				"http",
+				"eex",
+				"heex",
 			},
 			-- Autoinstall languages that are not installed
-			auto_install = false,
+			auto_install = true,
 			highlight = {
 				enable = true,
 				disable = { "latex", "tex" },
@@ -947,7 +949,6 @@ require("lazy").setup({
 	-- require 'kickstart.plugins.autopairs',
 	-- require 'kickstart.plugins.neo-tree',
 	require("kickstart.plugins.gitsigns"), -- adds gitsigns recommend keymaps
-	require("custom.plugins.all-themes"),
 	--    This is the easiest way to modularize your config.
 	--
 	--  Uncomment the following line and add your plugins to `lua/custom/plugins/*.lua` to get going.
